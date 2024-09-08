@@ -1,5 +1,9 @@
 {
 	"$schema": "https://json.schemastore.org/package.json",
+	"name": "@rainstormy/presets-typescript",
+	"version": "0.0.0",
+	"description": "Predefined, opinionated TypeScript configurations suitable for any TypeScript project.",
+	"keywords": ["tsconfig", "typescript"],
 	"bugs": "https://github.com/rainstormy/presets-typescript/issues",
 	"repository": {
 		"type": "git",
