@@ -37,5 +37,11 @@
 	"// devDependencies": {
 		"@biomejs/biome": "Biome is an opinionated linter and code formatter.",
 		"@rainstormy/presets-biome": "This library provides predefined, opinionated Biome configurations."
+	},
+	"peerDependencies": {
+		"typescript": ">=5.5.2 <6.0.0"
+	},
+	"// peerDependencies": {
+		"typescript": "The preset is made for TypeScript. When declared as a peer dependency, the package manager will remind the user to install it."
 	}
 }
