@@ -11,6 +11,7 @@
 		"isolatedModules": true,
 		"noEmit": true,
 		"noEmitOnError": true,
+		"noUncheckedSideEffectImports": true,
 		"noImplicitReturns": true,
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
