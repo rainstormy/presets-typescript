@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       typescript:
-        specifier: '>=5.5.2 <6.0.0'
-        version: 5.5.4
+        specifier: '>=5.6.2 <6.0.0'
+        version: 5.6.2
     devDependencies:
       '@biomejs/biome':
         specifier: 1.8.3
@@ -78,8 +78,8 @@ packages:
     resolution: {integrity: sha512-Ilk+ZznVcQfQxfT9FiHUoe9NVidgm96LGDX831uBveXOTw1o9/lEb3DkQ0DQTZHD5IuRF6pgsd0Cd6isngyLFA==}
     engines: {node: '>=20.0.0'}
 
-  typescript@5.5.4:
-    resolution: {integrity: sha512-Mtq29sKDAEYP7aljRgtPOpTvOfbwRWlS6dPRzwjdE+C0R4brX/GUyhHSecbHMFLNBLcJIPt9nl9yG5TZ1weH+Q==}
+  typescript@5.6.2:
+    resolution: {integrity: sha512-NW8ByodCSNCwZeghjN3o+JX5OFH0Ojg6sadjEKY4huZ52TqbJTJnDo5+Tw98lSy63NZvi4n+ez5m2u5d4PkZyw==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -122,4 +122,4 @@ snapshots:
 
   '@rainstormy/presets-biome@1.0.0-alpha.1': {}
 
-  typescript@5.5.4: {}
+  typescript@5.6.2: {}
