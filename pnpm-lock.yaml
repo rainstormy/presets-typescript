@@ -16,8 +16,8 @@ importers:
         specifier: 1.8.3
         version: 1.8.3
       '@rainstormy/presets-biome':
-        specifier: 1.0.0-alpha.1
-        version: 1.0.0-alpha.1
+        specifier: 1.0.0-alpha.2
+        version: 1.0.0-alpha.2(@biomejs/biome@1.8.3)
 
 packages:
 
@@ -74,9 +74,11 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@rainstormy/presets-biome@1.0.0-alpha.1':
-    resolution: {integrity: sha512-Ilk+ZznVcQfQxfT9FiHUoe9NVidgm96LGDX831uBveXOTw1o9/lEb3DkQ0DQTZHD5IuRF6pgsd0Cd6isngyLFA==}
+  '@rainstormy/presets-biome@1.0.0-alpha.2':
+    resolution: {integrity: sha512-0j+ABynIRXCIpalfKbIbHIVtzTzSP+JmFAYMqYSr2mLBDwBdsSWMex90F/mW6Z97bltkkCOPfYvmlbNYFyCkcQ==}
     engines: {node: '>=20.0.0'}
+    peerDependencies:
+      '@biomejs/biome': '>=1.9.0 <2.0.0'
 
   typescript@5.6.2:
     resolution: {integrity: sha512-NW8ByodCSNCwZeghjN3o+JX5OFH0Ojg6sadjEKY4huZ52TqbJTJnDo5+Tw98lSy63NZvi4n+ez5m2u5d4PkZyw==}
@@ -120,6 +122,8 @@ snapshots:
   '@biomejs/cli-win32-x64@1.8.3':
     optional: true
 
-  '@rainstormy/presets-biome@1.0.0-alpha.1': {}
+  '@rainstormy/presets-biome@1.0.0-alpha.2(@biomejs/biome@1.8.3)':
+    dependencies:
+      '@biomejs/biome': 1.8.3
 
   typescript@5.6.2: {}
