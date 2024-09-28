@@ -1,4 +1,4 @@
-# Presets for TypeScript
+# Opinionated Presets for TypeScript
 
 This package provides predefined,
 opinionated [TypeScript](https://www.typescriptlang.org) configurations to be
@@ -7,18 +7,15 @@ property in `tsconfig.json`.
 
 ## Installation
 Install the [`typescript`](https://www.npmjs.com/package/typescript)
-and [
-`@rainstormy/presets-typescript`](https://www.npmjs.com/package/@rainstormy/presets-typescript)
-packages:
+and [`@rainstormy/presets-typescript`](https://www.npmjs.com/package/@rainstormy/presets-typescript)
+packages with the package manager of your choice:
 
 ```shell
 npm install --save-dev typescript @rainstormy/presets-typescript
 ```
-or
 ```shell
 pnpm add --save-dev typescript @rainstormy/presets-typescript
 ```
-or
 ```shell
 yarn add --dev typescript @rainstormy/presets-typescript
 ```
