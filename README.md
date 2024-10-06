@@ -41,20 +41,20 @@ For example:
 
 ```json
 {
-    "$schema": "https://json.schemastore.org/tsconfig",
-    "extends": [
-        "@rainstormy/presets-typescript/base",
-        "@rainstormy/presets-typescript/es2023",
-        "@rainstormy/presets-typescript/dts+js"
-    ],
-    "compilerOptions": {
-        "baseUrl": "./",
-        "incremental": true,
-        "noEmitOnError": false,
-        "outDir": "dist",
-        "sourceMap": true
-    },
-    "include": ["./src/**/*.ts", "./*.config.js", "./*.config.ts"]
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": [
+    "@rainstormy/presets-typescript/base",
+    "@rainstormy/presets-typescript/es2023",
+    "@rainstormy/presets-typescript/dts+js"
+  ],
+  "compilerOptions": {
+    "baseUrl": "./",
+    "incremental": true,
+    "noEmitOnError": false,
+    "outDir": "dist",
+    "sourceMap": true
+  },
+  "include": ["./src/**/*.ts", "./*.config.js", "./*.config.ts"]
 }
 ```
 
