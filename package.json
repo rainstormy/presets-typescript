@@ -3,7 +3,10 @@
 	"name": "@rainstormy/presets-typescript",
 	"version": "1.0.0-alpha.0",
 	"description": "Predefined, opinionated TypeScript configurations suitable for any TypeScript project.",
-	"keywords": ["tsconfig", "typescript"],
+	"keywords": [
+		"tsconfig",
+		"typescript"
+	],
 	"bugs": "https://github.com/rainstormy/presets-typescript/issues",
 	"repository": {
 		"type": "git",
@@ -19,8 +22,10 @@
 		"./es2023": "./dist/es2023.json",
 		"./es2023-node": "./dist/es2023-node.json"
 	},
-	"files": ["dist/"],
-	"packageManager": "pnpm@9.5.0+sha256.dbdf5961c32909fb030595a9daa1dae720162e658609a8f92f2fa99835510ca5",
+	"files": [
+		"dist/"
+	],
+	"packageManager": "pnpm@9.12.2+sha512.22721b3a11f81661ae1ec68ce1a7b879425a1ca5b991c975b074ac220b187ce56c708fe5db69f4c962c989452eee76c82877f4ee80f474cebd61ee13461b6228",
 	"engines": {
 		"node": ">=20.0.0"
 	},
