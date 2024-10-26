@@ -27,12 +27,12 @@ extend `@rainstormy/presets-typescript/base` to enable type-checking in general.
 In addition to this, you can extend some of the following configurations to
 refine the TypeScript settings for your project:
 
-| Configuration                                | Description                                  |
-|----------------------------------------------|----------------------------------------------|
-| `@rainstormy/presets-typescript/es2023`      | Targets web browser and full-stack projects. |
-| `@rainstormy/presets-typescript/es2023-node` | Targets server-side Node.js projects.        |
-| `@rainstormy/presets-typescript/dts+js`      | Generates `js` and `d.ts` files.             |
-| `@rainstormy/presets-typescript/dts`         | Generates `d.ts` files only.                 |
+| Configuration                                | Description                                               |
+|----------------------------------------------|-----------------------------------------------------------|
+| `@rainstormy/presets-typescript/es2023`      | Targets browser apps, full-stack apps, and npm libraries. |
+| `@rainstormy/presets-typescript/es2023-node` | Targets Node.js apps.                                     |
+| `@rainstormy/presets-typescript/dts+js`      | Generates `js` and `d.ts` files.                          |
+| `@rainstormy/presets-typescript/dts`         | Generates `d.ts` files only.                              |
 
 You can override the predefined settings by specifying the desired options like
 `compilerOptions` and `include` as usual.
@@ -41,20 +41,20 @@ For example:
 
 ```json
 {
-    "$schema": "https://json.schemastore.org/tsconfig",
-    "extends": [
-        "@rainstormy/presets-typescript/base",
-        "@rainstormy/presets-typescript/es2023",
-        "@rainstormy/presets-typescript/dts+js"
-    ],
-    "compilerOptions": {
-        "baseUrl": "./",
-        "incremental": true,
-        "noEmitOnError": false,
-        "outDir": "dist",
-        "sourceMap": true
-    },
-    "include": ["./src/**/*.ts", "./*.config.js", "./*.config.ts"]
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": [
+    "@rainstormy/presets-typescript/base",
+    "@rainstormy/presets-typescript/es2023",
+    "@rainstormy/presets-typescript/dts+js"
+  ],
+  "compilerOptions": {
+    "baseUrl": "./",
+    "incremental": true,
+    "noEmitOnError": false,
+    "outDir": "dist",
+    "sourceMap": true
+  },
+  "include": ["./src/**/*.ts", "./*.config.js", "./*.config.ts"]
 }
 ```
 
