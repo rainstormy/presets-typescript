@@ -18,15 +18,15 @@ async function buildFile(filename) {
 
 	try {
 		const content = await readFile(sourcePath, "utf8")
-		const output = minifyJson(removeJsonCommentLines(content))
+		const output = minifyJson(removeJsonLineComments(content))
 		await writeFile(destinationPath, output, "utf8")
 	} catch (error) {
 		throw new Error(`${filename}: ${error.message}.`)
 	}
 }
 
-function removeJsonCommentLines(jsonContent) {
-	return jsonContent.replace(/^\t*\/\/.*$/gm, "")
+function removeJsonLineComments(jsonContent) {
+	return jsonContent.replace(/(?<=["}\]0-9e],?\s|\t)\/\/.*$/gm, "")
 }
 
 function minifyJson(jsonContent) {
