@@ -44,7 +44,7 @@ jobs:
         #
       - name: Skip if already built
         id: skip-if-already-built
-        uses: actions/cache@2cdf405574d6ef1f33a1d12acccd3ae82f47b3f2 # v4.1.0
+        uses: actions/cache@6849a6489940f00c2f30c0fb92c6274307ccb58a # v4.1.2
         with:
           # If an exact cache hit occurs, another workflow run on this branch has already built the project in the current configuration, and we can skip the rest of the job.
           # This is especially useful upon rebasing interactively.
@@ -74,7 +74,7 @@ jobs:
         #
       - name: Skip if already verified
         id: skip-if-already-verified
-        uses: actions/cache@2cdf405574d6ef1f33a1d12acccd3ae82f47b3f2 # v4.1.0
+        uses: actions/cache@6849a6489940f00c2f30c0fb92c6274307ccb58a # v4.1.2
         with:
           # If an exact cache hit occurs, another workflow run on this branch has already verified that the source code is clean in the current configuration, and we can skip the rest of the job.
           # This is especially useful upon rebasing interactively.
