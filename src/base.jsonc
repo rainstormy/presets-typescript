@@ -7,7 +7,6 @@
 		"exactOptionalPropertyTypes": false,
 		"forceConsistentCasingInFileNames": true,
 		"importHelpers": true,
-		"isolatedDeclarations": true,
 		"isolatedModules": true,
 		"noEmit": true,
 		"noEmitOnError": true,
