@@ -32,7 +32,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.8.3",
-		"@rainstormy/presets-biome": "1.0.0-alpha.1"
+		"@rainstormy/presets-biome": "1.0.0-alpha.2"
 	},
 	"// devDependencies": {
 		"@biomejs/biome": "Biome is an opinionated linter and code formatter.",
