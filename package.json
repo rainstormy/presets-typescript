@@ -28,15 +28,19 @@
 		"build": "node ./build.js",
 		"check": "pnpm check.fmt",
 		"check.fmt": "biome check --error-on-warnings",
-		"fmt": "biome check --write"
+		"fmt": "biome check --write",
+		"postinstall": "lefthook install",
+		"yolo": "lefthook uninstall"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.8.3",
-		"@rainstormy/presets-biome": "1.0.0-alpha.1"
+		"@rainstormy/presets-biome": "1.0.0-alpha.1",
+		"lefthook": "1.10.1"
 	},
 	"// devDependencies": {
 		"@biomejs/biome": "Biome is an opinionated linter and code formatter.",
-		"@rainstormy/presets-biome": "This library provides predefined, opinionated Biome configurations."
+		"@rainstormy/presets-biome": "This library provides predefined, opinionated Biome configurations.",
+		"lefthook": "Lefthook is a Git hooks manager."
 	},
 	"peerDependencies": {
 		"typescript": ">=5.6.2 <6.0.0"
