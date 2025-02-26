@@ -16,8 +16,8 @@ importers:
         specifier: 1.9.4
         version: 1.9.4
       '@rainstormy/presets-biome':
-        specifier: 1.0.0-alpha.3
-        version: 1.0.0-alpha.3(@biomejs/biome@1.9.4)
+        specifier: 1.0.0
+        version: 1.0.0(@biomejs/biome@1.9.4)
       lefthook:
         specifier: 1.10.11
         version: 1.10.11
@@ -77,11 +77,11 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@rainstormy/presets-biome@1.0.0-alpha.3':
-    resolution: {integrity: sha512-rHk1j7YtQ8VLK3waq7UGMx886cltCb3Z57BQ7qQqrri/t3+w9+N3XqqKO6VhnX3+qdYueE98r2Vm6TQh2UZkIQ==}
+  '@rainstormy/presets-biome@1.0.0':
+    resolution: {integrity: sha512-LbOMEIgB9fYNgbORYu+EmPp7vt4irCxqSFV4PR7jTbDDx+n0DS2SzDhatK/JOVnVKxL9kqgXi5bW3qrcERQoaA==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
-      '@biomejs/biome': '>=1.9.0 <2.0.0'
+      '@biomejs/biome': '>=1.9.0 <1.10.0'
 
   lefthook-darwin-arm64@1.10.11:
     resolution: {integrity: sha512-yFsuEKjO5FP1svuv7m+epGsKmec8hHWxYIAnL2sDMiVR+rbSrd4zKWCGis7hdu/H0ltR/3NbHWzM3NFcxmDalg==}
@@ -179,7 +179,7 @@ snapshots:
   '@biomejs/cli-win32-x64@1.9.4':
     optional: true
 
-  '@rainstormy/presets-biome@1.0.0-alpha.3(@biomejs/biome@1.9.4)':
+  '@rainstormy/presets-biome@1.0.0(@biomejs/biome@1.9.4)':
     dependencies:
       '@biomejs/biome': 1.9.4
 
