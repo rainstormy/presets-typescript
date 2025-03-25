@@ -4,7 +4,7 @@
 		"allowJs": false,
 		"checkJs": false,
 		"esModuleInterop": true,
-		"exactOptionalPropertyTypes": false,
+		"exactOptionalPropertyTypes": true,
 		"forceConsistentCasingInFileNames": true,
 		"importHelpers": true,
 		"isolatedModules": true,
