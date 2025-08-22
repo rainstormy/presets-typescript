@@ -1,0 +1,54 @@
+# Manage devtools and tasks with mise-en-place.
+# https://mise.jdx.dev/configuration.html
+
+min_version = "2025.9.0"
+
+[tools]
+node = "20.19.2"
+pnpm = "10.17.0"
+
+[tasks.build]
+# language=sh
+run = "node ./build.js"
+description = "Generates production-grade build artefacts."
+alias = ["b"]
+
+[tasks.check]
+depends = ["check_fmt"]
+description = "Runs `check_fmt`."
+alias = ["c"]
+
+[tasks.check_fmt]
+# language=sh
+run = "biome check --error-on-warnings"
+description = "Verifies the code style of the source code with Biome."
+alias = ["cf"]
+
+[tasks.fmt]
+# language=sh
+run = "biome check --skip-parse-errors --write"
+description = "Reformats the source code with Biome."
+alias = ["f"]
+
+[tasks.init]
+# language=sh
+run = ["pnpm install --ignore-scripts", "lefthook install"]
+description = "Installs Node.js packages with pnpm and enables the Git hooks with Lefthook."
+alias = ["i"]
+
+[tasks.yolo]
+# language=sh
+run = "lefthook uninstall"
+description = "Disables the Git hooks with Lefthook."
+
+[env]
+# Load environment variables from the `.env` and `.env.local` files.
+# https://mise.jdx.dev/environments/#env-file
+_.file = [".env", ".env.local"]
+
+# Make CLI programs in `node_modules` available directly in the command line.
+# https://mise.jdx.dev/mise-cookbook/nodejs.html#add-node-modules-binaries-to-the-path
+_.path = ["node_modules/.bin"]
+
+[settings]
+task_output = "quiet"
