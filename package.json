@@ -35,7 +35,7 @@
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
 		"@rainstormy/presets-biome": "1.0.0",
-		"lefthook": "1.12.2"
+		"lefthook": "1.12.3"
 	},
 	"// devDependencies": {
 		"@biomejs/biome": "Biome is an opinionated linter and code formatter.",
