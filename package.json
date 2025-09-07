@@ -34,7 +34,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
-		"@rainstormy/presets-biome": "1.0.0",
+		"@rainstormy/presets-biome": "2.0.1",
 		"lefthook": "1.12.2"
 	},
 	"// devDependencies": {
