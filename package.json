@@ -33,7 +33,7 @@
 		"yolo": "lefthook uninstall"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "1.9.4",
+		"@biomejs/biome": "2.2.3",
 		"@rainstormy/presets-biome": "1.0.0",
 		"lefthook": "1.12.2"
 	},
