@@ -4,6 +4,7 @@
 min_version = "2025.9.0"
 
 [tools]
+actionlint = "1.7.7"
 node = "20.19.2"
 pnpm = "10.17.0"
 
@@ -14,9 +15,15 @@ description = "Generates production-grade build artefacts."
 alias = ["b"]
 
 [tasks.check]
-depends = ["check_fmt"]
-description = "Runs `check_fmt`."
+depends = ["check_actions", "check_fmt"]
+description = "Runs `check_actions` and `check_fmt`."
 alias = ["c"]
+
+[tasks.check_actions]
+# language=sh
+run = "actionlint"
+description = "Verifies the syntax of the GitHub Actions workflows with actionlint."
+alias = ["ca"]
 
 [tasks.check_fmt]
 # language=sh
