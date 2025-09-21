@@ -1,0 +1,27 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.2.4/schema.json",
+	"extends": ["@rainstormy/presets-biome/2.2"],
+	"files": {
+		"includes": [
+			".github/**/*",
+			".vscode/**/*",
+			"src/**/*",
+			"*.{js,json,jsonc}"
+		]
+	},
+	"overrides": [
+		{
+			"includes": ["build.js"],
+			"linter": {
+				"rules": {
+					"correctness": {
+						"noNodejsModules": "off"
+					},
+					"style": {
+						"useFilenamingConvention": "off"
+					}
+				}
+			}
+		}
+	]
+}
