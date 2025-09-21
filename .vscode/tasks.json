@@ -46,6 +46,17 @@
 			"problemMatcher": []
 		},
 		{
+			"label": "check_renovate",
+			"command": "mise run check_renovate",
+			"type": "shell",
+			"presentation": {
+				"clear": true,
+				"panel": "shared",
+				"reveal": "always"
+			},
+			"problemMatcher": []
+		},
+		{
 			"label": "fmt",
 			"command": "mise run fmt",
 			"type": "shell",

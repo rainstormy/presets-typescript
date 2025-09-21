@@ -15,8 +15,8 @@ description = "Generates production-grade build artefacts."
 alias = ["b"]
 
 [tasks.check]
-depends = ["check_actions", "check_fmt"]
-description = "Runs `check_actions` and `check_fmt`."
+depends = ["check_actions", "check_fmt", "check_renovate"]
+description = "Runs `check_actions`, `check_fmt`, and `check_renovate`."
 alias = ["c"]
 
 [tasks.check_actions]
@@ -30,6 +30,14 @@ alias = ["ca"]
 run = "biome check --error-on-warnings"
 description = "Verifies the code style of the source code with Biome."
 alias = ["cf"]
+
+[tasks.check_renovate]
+# language=sh
+run = "pnpm dlx --package renovate renovate-config-validator"
+description = "Verifies the syntax of the Renovate configuration."
+sources = [".github/renovate.json"] # Only run this task if `renovate.json` has changed since the last run.
+outputs = { auto = true }
+alias = ["cr"]
 
 [tasks.fmt]
 # language=sh
