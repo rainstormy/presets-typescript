@@ -48,7 +48,6 @@ For example:
     "@rainstormy/presets-typescript/dts+js"
   ],
   "compilerOptions": {
-    "baseUrl": "./",
     "incremental": true,
     "noEmitOnError": false,
     "outDir": "dist",

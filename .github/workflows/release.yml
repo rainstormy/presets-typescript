@@ -1,12 +1,14 @@
-# This workflow creates a release commit and a pull request towards the `main` branch.
+# This workflow implements the first stage of the release pipeline.
+# It creates a release branch and a corresponding pull request towards the `main` branch.
+# Upon approving the pull request, the release pipeline automatically proceeds to publish the release.
 #
-# It can be triggered manually on any branch via the GitHub CLI:
+# It can be triggered manually on the `main` branch via the GitHub CLI:
 #
-#   gh workflow run release.yml --field version=<major.minor.patch[-prerelease][+buildinfo]> --ref <branch-name>
+#   gh workflow run release.yml --field version=<major.minor.patch[-prerelease][+buildinfo]>
 #   gh run watch
 #
-# It can be triggered manually via the GitHub web interface:
-#   https://github.com/rainstormy/presets-typescript/actions/workflows/release.yml
+# It can also be triggered manually via the GitHub web interface:
+# https://github.com/rainstormy/presets-typescript/actions/workflows/release.yml
 
 name: Release
 
@@ -29,17 +31,19 @@ concurrency:
 # All third-party actions are pinned to a specific commit SHA for security reasons.
 # https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#using-third-party-actions
 jobs:
-  quality-assurance:
-    name: Quality assurance
+  integrity:
+    name: Integrity
     permissions:
-      contents: read # Allow the job to call the reusable `ci.yml` workflow.
-      pull-requests: read # `ci.yml` requires `pull-requests` read permissions.
-    uses: ./.github/workflows/ci.yml
+      # To call reusable workflows.
+      contents: read
+    uses: ./.github/workflows/integrity.yml
 
-  pull-request:
-    name: Pull request
-    needs: quality-assurance
-    runs-on: ubuntu-24.04
+  release-branch:
+    name: Release branch
+    # A release must always be created from the `main` branch.
+    if: github.ref_name == github.event.repository.default_branch
+    needs: integrity
+    runs-on: ubuntu-24.04-arm
     timeout-minutes: 1
     permissions: { }
     steps:
@@ -49,10 +53,7 @@ jobs:
           # Use a separate access token with permission to commit and push.
           token: ${{ secrets.BOT_NIMBUS_GH_AUTH_TOKEN }}
         #
-      - name: Restore build artifacts
-        uses: ./.github/actions/build-artifacts
-        #
-      - name: Update release artifacts
+      - name: Update the release artefacts
         uses: rainstormy/updraft@23bb449c54a4e967c87a6943a1ef9a237eafdb99 # v1.2.0
         with:
           check-sequential-release: true
