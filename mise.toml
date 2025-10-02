@@ -6,7 +6,7 @@ min_version = "2025.9.0"
 [tools]
 actionlint = "1.7.7"
 node = "24.8.0"
-pnpm = "10.17.0"
+pnpm = "10.18.0"
 
 [tasks.build]
 # language=sh
