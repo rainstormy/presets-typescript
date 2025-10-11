@@ -16,8 +16,8 @@ importers:
         specifier: 2.2.4
         version: 2.2.4
       '@rainstormy/presets-biome':
-        specifier: 2.0.3
-        version: 2.0.3(@biomejs/biome@2.2.4)
+        specifier: 2.0.4
+        version: 2.0.4(@biomejs/biome@2.2.4)
       lefthook:
         specifier: 1.13.6
         version: 1.13.6
@@ -77,8 +77,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@rainstormy/presets-biome@2.0.3':
-    resolution: {integrity: sha512-4XfpUW91hnuc4YH5+1j4MlCB7WmhX8anZRq2gojB0GGDYP3sSyORUttrG6ExLuPUoTWMM1S/CxCUZjUTLJHeWA==}
+  '@rainstormy/presets-biome@2.0.4':
+    resolution: {integrity: sha512-Nd0CibHQoR8hZ307iaBW3V0mQeUBSTpKZZromrB43K1HKcQOgza191tRvaer8bb4XqTCT61u1nLTja6+/gxooQ==}
     peerDependencies:
       '@biomejs/biome': '>=2.2.0 <2.3.0'
 
@@ -178,7 +178,7 @@ snapshots:
   '@biomejs/cli-win32-x64@2.2.4':
     optional: true
 
-  '@rainstormy/presets-biome@2.0.3(@biomejs/biome@2.2.4)':
+  '@rainstormy/presets-biome@2.0.4(@biomejs/biome@2.2.4)':
     dependencies:
       '@biomejs/biome': 2.2.4
 
