@@ -1,6 +1,6 @@
 {
 	"$schema": "https://biomejs.dev/schemas/2.3.8/schema.json",
-	"extends": ["@rainstormy/presets-biome/2.2"],
+	"extends": ["@rainstormy/presets-biome/2.3"],
 	"files": {
 		"includes": [
 			".github/**/*",
