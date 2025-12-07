@@ -17,8 +17,8 @@ description = "Generates production-grade build artefacts."
 alias = ["b"]
 
 [tasks.check]
-depends = ["check_actions", "check_fmt", "check_renovate"]
-description = "Runs `check_actions`, `check_fmt`, and `check_renovate`."
+depends = ["check_actions", "check_fmt"] # Skip the time-consuming `check_renovate` task.
+description = "Runs `check_actions` and `check_fmt`."
 alias = ["c"]
 
 [tasks.check_actions]
@@ -43,8 +43,6 @@ run = """
 	pnpm dlx --package renovate renovate-config-validator
 """
 description = "Verifies the syntax of the Renovate configuration."
-sources = [".github/renovate.json"] # Only run this task if `renovate.json` has changed since the last run.
-outputs = { auto = true }
 alias = ["cr"]
 
 [tasks.fmt]
