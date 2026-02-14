@@ -10,6 +10,8 @@
 #
 # It can also be triggered manually via the GitHub web interface:
 # https://github.com/rainstormy/presets-typescript/actions/workflows/publish-npm.yml
+#
+# CAUTION: The workflow filename `publish-npm.yml` is defined as the trusted publisher of the `@rainstormy/presets-typescript` package in the npm registry.
 
 name: Publish / npm
 
@@ -46,8 +48,9 @@ jobs:
       # To check out the repository.
       contents: read
       #
-      # To publish the npm package with provenance.
+      # To publish the npm package with provenance and trusted publishing.
       # https://docs.npmjs.com/generating-provenance-statements#publishing-packages-with-provenance-via-github-actions
+      # https://docs.npmjs.com/trusted-publishers#step-2-configure-your-cicd-workflow
       id-token: write
     steps:
       - name: Check out the repository
@@ -59,16 +62,11 @@ jobs:
       - name: Install dependencies
         uses: ./.github/actions/dependencies
         #
-      - name: Set the target npm registry and prepare an auth token
-        # language=sh
-        run: echo -e "//registry.npmjs.org/:_authToken=\${NODE_AUTH_TOKEN}\nregistry=https://registry.npmjs.org/" > .npmrc
-        shell: bash
-        #
       - name: Publish the package to npm
         uses: rainstormy/release/npm@eb87dc4ba5e9e89451adce4a3c62538e5ecef809 # v1.1.1
         with:
           access-level: public
-          npm-auth-token: ${{ secrets.BOT_NIMBUS_NPM_TOKEN }}
+          npm-auth-token: ignored
           packagejson-excluded-fields: |
             // devDependencies
             // peerDependencies
